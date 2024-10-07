@@ -83,13 +83,13 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition@v1
-        container-name: prasanna-src
-        image: prasanna-src
+        container-name: prasanna
+        image: prasanna
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: task-definition@v1
         service: ECR
-        cluster: prasanna-src
+        cluster: prasanna-
         wait-for-service-stability: true
